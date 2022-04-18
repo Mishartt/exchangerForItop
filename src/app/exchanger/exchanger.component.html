@@ -1,0 +1,18 @@
+<div class="container">
+
+    <div>
+        <input [(ngModel)]="title1" #input1L (input)="input1(input1L.value)" placeholder="200" type="text">
+        <select [(ngModel)]="currency1" (change)="change()">
+            <option value="1">UAH</option>
+            <option *ngFor="let currency of exchangerService.exchangeRates; let i = index"   value={{currency.rate}}>{{currency.cc}}</option>
+        </select>
+    </div>
+
+    <div>  
+        <select (change)="change2()" [(ngModel)]="currency2">
+            <option *ngFor="let currency of exchangerService.exchangeRates; let i = index"   value={{currency.rate}}>{{currency.cc}}</option>
+            <option value="1">UAH</option>
+        </select>
+        <input [(ngModel)]="title2" #input2L (input)="input2(input2L.value)" placeholder="200" type="text">
+    </div>
+</div>
