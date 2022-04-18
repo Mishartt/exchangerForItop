@@ -19,3 +19,33 @@ body{
 }
 
 
+@media(min-width:1200px){
+    .container{
+        width: 700px;
+        height: 350px;
+    }
+}
+
+
+@media(max-width:1200px){
+    .container{
+        width: 700px;
+        height: 350px;
+    }
+}
+
+@media(max-width:1024px){
+    .container{
+        width: 700px;
+        height: 350px;
+    }
+}
+
+
+@media(max-width:768px){
+    .container{
+        width: 90vw;
+        height: 350px;
+        flex-direction: column;  
+      }
+}
